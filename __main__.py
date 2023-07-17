@@ -1,0 +1,1 @@
+print("¡Bienvenido a administrador de tareas! Esta aplicación te permitirá organizar y gestionar tus tareas de manera sencilla y eficiente. Podrás agregar nuevas tareas, eliminar las que ya no necesites y marcar como completadas aquellas que hayas finalizado")
