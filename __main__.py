@@ -5,8 +5,8 @@ while selected_option != "quit":
     selected_option = input("tasklist>>> ")
     if selected_option == "list":
         print("List")
-    elif selected_option == "create":
-        print("Create")
+    elif selected_option == "add":
+        print("Add")
     elif selected_option == "delete":
         print("Delete")
     elif selected_option == "complete":
@@ -14,5 +14,9 @@ while selected_option != "quit":
     elif selected_option == "quit":
         print("Quit")
     else:
-        print("Help")
-
+        print("list: lista todas las tareas creadas")
+        print("add: add a new task to the list")
+        print("delete: delete a task from the list")
+        print("complete: complete a task from the list")
+        print("quit: quit from tasklist")
+        print("help: show help")
