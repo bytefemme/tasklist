@@ -1,24 +1,34 @@
 print("¡Bienvenido a administrador de tareas! Esta aplicación te permitirá organizar y gestionar tus tareas de manera sencilla y eficiente. Podrás agregar nuevas tareas, eliminar las que ya no necesites y marcar como completadas aquellas que hayas finalizado")
 print("")
 
+
+task_list = []
+
+counter = 0
+
 selected_option = ""
+
 while selected_option != "quit":
     selected_option = input("tasklist>>> ")
+    
     if selected_option == "list":
-        task1 ={"id":1,"name":"nath","description":"sensual","date":"today","isComplete":False}
-        task2 ={"id":2,"name":"mike","description":"sexy","date":"today","isComplete":False}
-        task3 ={"id":3,"name":"jose","description":"handsome","date":"today","isComplete":False}
-        tasks = [task1, task2, task3]
-        for task in tasks:
+        for task in task_list:
             print("id: " + str(task["id"]))
             print("name: " + task["name"])
             print("description: " + task["description"])
             print("date: " + task["date"])
             print("isComplete: " + str(task["isComplete"]))
-            print()
-
+            print() 
     elif selected_option == "add":
-        print("Add")
+        counter += 1
+        task_id = counter 
+        task_name = input("enter task name: ")
+        task_description = input("enter a description: ")
+        task_date = input("enter a date (day/month/year): ")
+        is_task_complete = False
+        task ={"id":task_id,"name":task_name,"description":task_description,"date":task_date,"isComplete":is_task_complete}
+        task_list.append(task)
+        print("new task added")
     elif selected_option == "delete":
         print("Delete")
     elif selected_option == "complete":
