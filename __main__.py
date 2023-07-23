@@ -30,7 +30,11 @@ while selected_option != "quit":
         task_list.append(task)
         print("new task added")
     elif selected_option == "delete":
-        print("Delete")
+        task_delete = int(input("enter task id: "))
+        for task in task_list:
+            if task["id"] == task_delete:
+                task_list.remove(task)
+                print("task deleted")
     elif selected_option == "complete":
         print("Complete")
     elif selected_option == "quit":
