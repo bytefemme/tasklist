@@ -17,7 +17,7 @@ while selected_option != "quit":
             print("name: " + task["name"])
             print("description: " + task["description"])
             print("date: " + task["date"])
-            print("isComplete: " + str(task["isComplete"]))
+            print("is_complete: " + str(task["is_complete"]))
             print() 
     elif selected_option == "add":
         counter += 1
@@ -26,7 +26,7 @@ while selected_option != "quit":
         task_description = input("enter a description: ")
         task_date = input("enter a date (day/month/year): ")
         is_task_complete = False
-        task ={"id":task_id,"name":task_name,"description":task_description,"date":task_date,"isComplete":is_task_complete}
+        task ={"id":task_id,"name":task_name,"description":task_description,"date":task_date,"is_complete":is_task_complete}
         task_list.append(task)
         print("new task added")
     elif selected_option == "delete":
@@ -36,7 +36,15 @@ while selected_option != "quit":
                 task_list.remove(task)
                 print("task deleted")
     elif selected_option == "complete":
-        print("Complete")
+        task_complete = int(input("enter task id: "))
+        for task in task_list:
+            if task ["id"] == task_complete:
+                task ["is_complete"] = True               
+                print("task completed")
+            
+
+            
+
     elif selected_option == "quit":
         print("Quit")
     else:
