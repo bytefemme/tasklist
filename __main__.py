@@ -41,10 +41,17 @@ while selected_option != "quit":
             if task ["id"] == task_complete:
                 task ["is_complete"] = True               
                 print("task completed")
-            
-
-            
-
+    elif selected_option == "edit":
+        task_edit = int(input("enter task id: "))
+        task_name = input("enter task name: ")
+        task_description = input("enter a description: ")
+        task_date = input("enter a date (day/month/year): ")
+        for task in task_list:
+            if task["id"] == task_edit:
+               task["name"] = task_name
+               task["description"] = task_description
+               task["date"] = task_date 
+        print("tarea modificada")
     elif selected_option == "quit":
         print("Quit")
     else:
